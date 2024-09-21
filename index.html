@@ -53,7 +53,7 @@
 
             .gridLeft {
                 display: grid;
-                grid-template-rows: 1fr 1fr;
+                grid-template-rows: 1fr auto;
                 grid-row-gap: 32px;
                 width: 100%;
                 max-width: 100%;
@@ -90,7 +90,7 @@
                 font-size: 42px;
                 font-weight: normal;
                 margin-top: 0;
-                line-height: 1;
+                line-height: 0.9;
                 letter-spacing: -3px;
             }
 
@@ -104,18 +104,69 @@
                 font-style: italic;
             }
 
-            //.gridRight {
-            //    display: grid;
-            //    grid-template-rows: 56vh 24vh;
-            //    grid-row-gap: 32px;
-            //}
+            .gridRight {
+                display: grid;
+                grid-template-rows: calc(70% - 16px) calc(30% - 16px);
+                grid-row-gap: 32px;
+            }
 
-            //.gridRightTop {
-            //    display: grid;
-            //    grid-template-columns: 0.66fr 0.34fr;
-            //    grid-column-gap: 32px;
-            //    width: 100%;
-            //}
+            .gridRightTop {
+                display: grid;
+                grid-template-columns: calc(66% - 16px) calc(34% - 16px);
+                grid-column-gap: 32px;
+                width: 100%;
+            }
+
+            .gridRightTopLeft {
+                display: grid;
+                grid-template-rows: fit-content(100%) auto;
+                grid-row-gap: 32px;
+            }
+
+            .gridRightTopLeftTopCard {
+                align-items: center;
+                background-color: var(--color-purple-500);
+                padding: 60px 54px;
+                justify-content: center;
+                height: fit-content;
+            }
+
+            .gridRightTopLeftTopCard h2{
+                color: var(--color-light-grey);
+                font-size: 56px;
+                font-weight: normal;
+                margin-top: 0;
+                margin-bottom: 24px;
+                letter-spacing: -1px;
+                text-align: center;
+            }
+
+            .gridRightTopLeftTopCard img{
+                max-width: 186px;
+            }
+
+            .gridRightTopLeftTopCard p{
+                color: var(--color-light-grey);
+                text-align: center;
+                margin-bottom: 0;
+                letter-spacing: 1px;
+            }
+
+            .gridRightTopLeftTopCard .center{
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .gridRightTopLeftTopCard .span1{
+                color: var(--color-yellow-500);
+            }
+
+            .gridRightTopLeftTopCard .span2{
+                font-style: italic;
+            }
         </style>
     </head>
     <body>
@@ -131,41 +182,43 @@
                 </div>
             </section>
             <section class="gridRight">
-<!--                <section class="gridRightTop">-->
-<!--                    <section class="gridRightTopLeft">-->
-<!--                        <div class="gridRightTopLeftTopCard cardBox">-->
-<!--                            <h2>Social Media <span>10x</span> Faster with AI</h2>-->
-<!--                            <img src="assets/images/illustration-five-stars.webp" alt="five stars illustration" aria-hidden="true">-->
-<!--                            <p>Over 4,000 5-star reviews</p>-->
-<!--                        </div>-->
-<!--                        <section class="gridRightTopLeftBottom">-->
-<!--                            <div class="gridRightTopLeftBottomLeftCard cardBox">-->
+                <section class="gridRightTop">
+                    <section class="gridRightTopLeft">
+                        <div class="gridRightTopLeftTopCard cardBox">
+                            <h2>Social Media <span class="span1">10x</span> <span class="span2">Faster</span> with AI</h2>
+                            <div class="center">
+                                <img src="assets/images/illustration-five-stars.webp" alt="five stars illustration" aria-hidden="true">
+                            </div>
+                            <p>Over 4,000 5-star reviews</p>
+                        </div>
+                        <section class="gridRightTopLeftBottom">
+                            <div class="gridRightTopLeftBottomLeftCard cardBox">
 <!--                                <img src="assets/images/illustration-multiple-platforms.webp" alt="multiple platforms illustration" aria-hidden="true">-->
-<!--                                <h2>Manage multiple accounts and platforms.</h2>-->
-<!--                            </div>-->
-<!--                            <div class="gridRightTopLeftBottomRightCard cardBox">-->
-<!--                                <h2>Maintain a consistent posting schedule.</h2>-->
+                                <h2>Manage multiple accounts and platforms.</h2>
+                            </div>
+                            <div class="gridRightTopLeftBottomRightCard cardBox">
+                                <h2>Maintain a consistent posting schedule.</h2>
 <!--                                <img src="assets/images/illustration-consistent-schedule.webp" alt="consistent schedule illustration" aria-hidden="true">-->
-<!--                            </div>-->
-<!--                        </section>-->
-<!--                    </section>-->
-<!--                    <div class="gridRightTopRightCard cardBox">-->
-<!--                        <h2>Schedule to social media.</h2>-->
+                            </div>
+                        </section>
+                    </section>
+                    <div class="gridRightTopRightCard cardBox">
+                        <h2>Schedule to social media.</h2>
 <!--                        <img src="assets/images/illustration-schedule-posts.webp" alt="schedule posts illustration" aria-hidden="true">-->
-<!--                        <p>Optimize post timings to publish content at the perfect time for your audience.</p>-->
-<!--                    </div>-->
-<!--                </section>-->
-<!--                <section class="gridRightBottom">-->
-<!--                    <div class="gridRightBottomLeftCard cardBox">-->
-<!--                        <h2>>56%</h2>-->
-<!--                        <p>faster audience growth</p>-->
+                        <p>Optimize post timings to publish content at the perfect time for your audience.</p>
+                    </div>
+                </section>
+                <section class="gridRightBottom">
+                    <div class="gridRightBottomLeftCard cardBox">
+                        <h2>>56%</h2>
+                        <p>faster audience growth</p>
 <!--                        <img src="assets/images/illustration-audience-growth.webp" alt="audience growth illustration" aria-hidden="true">-->
-<!--                    </div>-->
-<!--                    <div class="gridRightBottomRightCard cardBox">-->
+                    </div>
+                    <div class="gridRightBottomRightCard cardBox">
 <!--                        <img src="assets/images/illustration-grow-followers.webp" alt="grow followers illustration" aria-hidden="true">-->
-<!--                        <h2>Grow followers with non-stop content.</h2>-->
-<!--                    </div>-->
-<!--                </section>-->
+                        <h2>Grow followers with non-stop content.</h2>
+                    </div>
+                </section>
             </section>
         </main>
         <footer class="attribution">
