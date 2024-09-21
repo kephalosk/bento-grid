@@ -13,7 +13,8 @@
                 --color-yellow-100: hsl(31, 66%, 93%);
                 --color-yellow-500: hsl(39, 100%, 71%);
                 --color-white: hsl(0, 0%, 100%);
-                --color-light-grey: hsl(0, 0%, 90%);
+                --color-light-grey: hsl(0, 0%, 92%);
+                --color-lighter-grey: hsl(0, 0%, 98%);
                 --color-black: hsl(0, 0%, 7%);
             }
 
@@ -61,15 +62,15 @@
 
             .gridLeftBottomCard {
                 background-color: var(--color-yellow-500);
-                padding: 24px;
+                padding: 24px 12px 24px 24px;
                 height: fit-content;
             }
 
             .gridLeftBottomCard h2{
-                font-size: 42px;
+                font-size: 44px;
                 font-weight: normal;
                 margin-top: 0;
-                line-height: 1;
+                line-height: 0.9;
                 letter-spacing: -2px;
             }
 
@@ -121,6 +122,31 @@
                 display: grid;
                 grid-template-rows: fit-content(100%) auto;
                 grid-row-gap: 32px;
+            }
+
+            .gridRightTopLeftBottom {
+                display: grid;
+                grid-template-columns: calc(50% - 16px) calc(50% - 16px);
+                grid-column-gap: 32px;
+            }
+
+            .gridRightTopLeftBottomLeftCard {
+                background-color: var(--color-lighter-grey);
+                overflow: hidden;
+                padding: 30px 24px 20px 24px;
+            }
+
+            .gridRightTopLeftBottomLeftCard h2{
+                font-weight: normal;
+                font-size: 30px;
+                margin-bottom: 0;
+                margin-top: 16px;
+                letter-spacing: -1px;
+                line-height: 0.9;
+            }
+
+            .gridRightTopLeftBottomLeftCard img{
+                max-height: 64px;
             }
 
             .gridRightTopLeftTopCard {
@@ -193,7 +219,7 @@
                         </div>
                         <section class="gridRightTopLeftBottom">
                             <div class="gridRightTopLeftBottomLeftCard cardBox">
-<!--                                <img src="assets/images/illustration-multiple-platforms.webp" alt="multiple platforms illustration" aria-hidden="true">-->
+                                <img src="assets/images/illustration-multiple-platforms.webp" alt="multiple platforms illustration" aria-hidden="true">
                                 <h2>Manage multiple accounts and platforms.</h2>
                             </div>
                             <div class="gridRightTopLeftBottomRightCard cardBox">
