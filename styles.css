@@ -1,0 +1,430 @@
+:root {
+    --color-purple-100: hsl(254, 88%, 90%);
+    --color-purple-500: hsl(256, 67%, 59%);
+    --color-yellow-100: hsl(31, 66%, 93%);
+    --color-yellow-500: hsl(39, 100%, 71%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-grey: hsl(0, 0%, 92%);
+    --color-lighter-grey: hsl(0, 0%, 98%);
+    --color-black: hsl(0, 0%, 7%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-light-grey);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+}
+
+main {
+    font-family: "DM+Sans",sans-serif;
+    padding: 80px 11vw 65px 11vw;
+    display: grid;
+    grid-template-columns: minmax(260px, 25%) minmax(812px, 75%);
+    grid-column-gap: 32px;
+    max-height: 100%;
+
+    @media (max-width: 1425px) and (min-width: 556px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 32px;
+    }
+
+    @media (max-width: 555px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 32px;
+        padding: 32px 16px 40px 16px;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.cardBox {
+    border-radius: 10px;
+}
+
+.gridLeft {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-row-gap: 32px;
+    width: 100%;
+    max-width: 100%;
+
+    @media (max-width: 1425px) and (min-width: 1041px) {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 32px;
+        grid-row-gap: 0;
+    }
+
+    @media (max-width: 1040px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-row-gap: 32px;
+        grid-column-gap: 0;
+    }
+}
+
+.gridLeftBottomCard {
+    background-color: var(--color-yellow-500);
+    padding: 24px 12px 24px 24px;
+    height: 100%;
+
+    @media (max-width: 1040px) {
+        max-width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.gridLeftBottomCard h2{
+    font-size: 44px;
+    font-weight: normal;
+    margin-top: 0;
+    line-height: 0.9;
+    letter-spacing: -2px;
+
+    @media (max-width: 555px) {
+        font-size: 36px;
+    }
+}
+
+.gridLeftBottomCard img {
+    width: 100%;
+    max-width: 228px;
+}
+
+.gridLeftTopCard {
+    background-color: var(--color-yellow-100);
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 32px;
+
+    @media (max-width: 1040px) {
+        height: auto;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.gridLeftTopCard h2{
+    font-size: 42px;
+    font-weight: normal;
+    margin-top: 0;
+    line-height: 0.9;
+    letter-spacing: -3px;
+
+    @media (max-width: 555px) {
+        font-size: 36px;
+    }
+}
+
+.gridLeftTopCard img {
+    width: 100%;
+    max-width: 200px;
+
+    @media (max-width: 1040px) {
+        height: auto;
+        max-width: 200px;
+    }
+}
+
+.gridLeftTopCard span{
+    color: var(--color-purple-500);
+    font-style: italic;
+}
+
+.gridRight {
+    display: grid;
+    grid-template-rows: calc(70% - 16px) calc(30% - 16px);
+    grid-row-gap: 32px;
+    max-height: 914px;
+
+    @media (max-width: 1040px){
+        grid-template-rows: fit-content(100%) fit-content(100%);
+        max-height: 100%;
+    }
+}
+
+.gridRightBottom {
+    display: grid;
+    grid-template-columns: calc(34% - 32px) calc(66%) ;
+    grid-column-gap: 32px;
+    width: 100%;
+    max-height: 260px;
+
+    @media (max-width: 1040px) and (min-width: 556px){
+        grid-template-columns: 1fr;
+        grid-row-gap: 32px;
+        grid-column-gap: 0;
+        max-height: 100%;
+    }
+
+    @media (max-width: 555px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 32px;
+        grid-column-gap: 0;
+        max-height: 100%;
+    }
+}
+
+.gridRightBottomLeftCard {
+    background-color: var(--color-lighter-grey);
+    padding: 24px;
+
+    @media (max-width: 1040px) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.gridRightBottomLeftCard h2{
+    font-size: 60px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.gridRightBottomLeftCard img{
+    max-height: 64px;
+}
+
+.gridRightBottomLeftCard p{
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+}
+
+.gridRightBottomRightCard {
+    align-items: center;
+    background-color: var(--color-purple-500);
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+
+    @media (max-width: 555px) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.gridRightBottomRightCard h2{
+    color: var(--color-white);
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-left: 8px;
+}
+
+.gridRightBottomRightCard img{
+    max-height: 200px;
+}
+
+.gridRightTop {
+    display: grid;
+    grid-template-columns: calc(66% - 16px) calc(34% - 16px);
+    grid-column-gap: 32px;
+    width: 100%;
+    max-height: 622px;
+
+    @media (max-width: 1040px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-row-gap: 32px;
+        grid-column-gap: 0;
+        max-height: 100%;
+    }
+}
+
+.gridRightTopLeft {
+    display: grid;
+    grid-template-rows: 340px 250px;
+    grid-row-gap: 32px;
+    max-height: 100%;
+
+    @media (max-width: 1040px) {
+        grid-template-rows: auto auto;
+    }
+}
+
+.gridRightTopLeftBottom {
+    display: grid;
+    grid-template-columns: calc(50% - 16px) calc(50% - 16px);
+    grid-column-gap: 32px;
+    max-height: 100%;
+
+    @media (max-width: 1040px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 32px;
+        grid-column-gap: 0;
+        max-height: 100%;
+    }
+}
+
+.gridRightTopLeftBottomLeftCard {
+    background-color: var(--color-lighter-grey);
+    overflow: hidden;
+    padding: 30px 24px 20px 24px;
+    max-height: 100%;
+
+    @media (max-width: 1040px) {
+        max-width: 100%;
+    }
+}
+
+.gridRightTopLeftBottomLeftCard h2{
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-top: 16px;
+    letter-spacing: -1px;
+    line-height: 0.9;
+
+    @media (max-width: 555px) {
+        font-size: 25px;
+    }
+}
+
+.gridRightTopLeftBottomLeftCard img{
+    max-height: 64px;
+
+    @media (max-width: 555px) {
+        height: auto;
+        max-width: 300px;
+    }
+}
+
+.gridRightTopLeftBottomRightCard {
+    background-color: var(--color-yellow-500);
+    padding: 24px 24px 0 24px;
+    max-height: 100%;
+    overflow: hidden;
+
+    @media (max-width: 1040px) {
+        max-width: 100%;
+    }
+}
+
+.gridRightTopLeftBottomRightCard h2{
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 0.9;
+    letter-spacing: -1px;
+}
+
+.gridRightTopLeftBottomRightCard img{
+    max-width: 200px;
+}
+
+.gridRightTopLeftTopCard {
+    align-items: center;
+    background-color: var(--color-purple-500);
+    padding: 60px 54px;
+    justify-content: center;
+    max-height: 100%;
+    min-width: 520px;
+
+    @media (max-width: 1040px) and (min-width: 556px) {
+        min-width: 100%;
+    }
+
+    @media (max-width: 555px) {
+        min-width: 100%;
+        padding: 40px;
+        height: 100%;
+    }
+}
+
+.gridRightTopLeftTopCard h2{
+    color: var(--color-light-grey);
+    font-size: 56px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+    text-align: center;
+
+    @media (max-width: 555px) {
+        font-size: 42px;
+    }
+}
+
+.gridRightTopLeftTopCard img{
+    max-width: 186px;
+}
+
+.gridRightTopLeftTopCard p{
+    color: var(--color-light-grey);
+    text-align: center;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+.gridRightTopLeftTopCard .center{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.gridRightTopLeftTopCard .span1{
+    color: var(--color-yellow-500);
+}
+
+.gridRightTopLeftTopCard .span2{
+    font-style: italic;
+}
+
+.gridRightTopRightCard {
+    background-color: var(--color-purple-100);
+    padding: 32px;
+    overflow: hidden;
+
+    @media (max-width: 1040px) {
+        max-width: 100%;
+    }
+}
+
+.gridRightTopRightCard h2{
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: -2px;
+    line-height: 0.9;
+}
+
+.gridRightTopRightCard img{
+    max-height: 320px;
+
+    @media (max-width: 1040px) and (min-width: 556px) {
+        max-height: 100%;
+        max-width: 320px;
+    }
+
+    @media (max-width: 555px) {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+.gridRightTopRightCard p{
+    font-size: 20px;
+}
