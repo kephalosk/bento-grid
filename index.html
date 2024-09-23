@@ -165,13 +165,9 @@
                 grid-row-gap: 32px;
                 max-height: 914px;
 
-                @media (max-width: 1040px) and (min-width: 556px){
+                @media (max-width: 1040px){
                     grid-template-rows: fit-content(100%) fit-content(100%);
                     max-height: 100%;
-                }
-
-                @media (max-width: 555px) {
-                    grid-template-rows: auto auto;
                 }
             }
 
@@ -191,12 +187,9 @@
 
                 @media (max-width: 555px) {
                     grid-template-columns: 1fr;
-                    //grid-template-rows: fit-content(100%) fit-content(100%);
                     grid-row-gap: 32px;
                     grid-column-gap: 0;
                     max-height: 100%;
-                    //height: 1000px;
-                    //max-height: 1000px;
                 }
             }
 
@@ -235,8 +228,8 @@
                 padding: 24px;
 
                 @media (max-width: 555px) {
-                    //flex-direction: column;
-                    //text-align: center;
+                    flex-direction: column;
+                    text-align: center;
                 }
             }
 
@@ -265,7 +258,6 @@
                     grid-row-gap: 32px;
                     grid-column-gap: 0;
                     max-height: 100%;
-                    //height: 10000px;
                 }
             }
 
@@ -314,7 +306,7 @@
                 line-height: 0.9;
 
                 @media (max-width: 555px) {
-                    //font-size: 25px;
+                    font-size: 25px;
                 }
             }
 
@@ -322,8 +314,8 @@
                 max-height: 64px;
 
                 @media (max-width: 555px) {
-                    //height: auto;
-                    //max-width: 300px;
+                    height: auto;
+                    max-width: 300px;
                 }
             }
 
@@ -359,13 +351,13 @@
                 max-height: 100%;
                 min-width: 520px;
 
-                @media (max-width: 1040px) {
+                @media (max-width: 1040px) and (min-width: 556px) {
                     min-width: 100%;
                 }
 
                 @media (max-width: 555px) {
-                    //padding: 40px;
-                    //height: 100%;
+                    padding: 40px;
+                    height: 100%;
                 }
             }
 
@@ -379,7 +371,7 @@
                 text-align: center;
 
                 @media (max-width: 555px) {
-                    //font-size: 42px;
+                    font-size: 42px;
                 }
             }
 
@@ -436,8 +428,8 @@
                 }
 
                 @media (max-width: 555px) {
-                    //max-height: 100%;
-                    //max-width: 100%;
+                    max-height: 100%;
+                    max-width: 100%;
                 }
             }
 
