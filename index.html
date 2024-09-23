@@ -33,10 +33,15 @@
 
             main {
                 font-family: "DM+Sans",sans-serif;
-                padding: 80px 160px 65px 160px;
+                padding: 80px 11vw 65px 11vw;
                 display: grid;
-                grid-template-columns: calc(25% - 16px) calc(75% - 16px);
+                grid-template-columns: minmax(260px, 25%) minmax(812px, 75%);
                 grid-column-gap: 32px;
+                
+                @media (max-width: 1425px) {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 32px;
+                }
             }
 
             .attribution {
@@ -58,12 +63,31 @@
                 grid-row-gap: 32px;
                 width: 100%;
                 max-width: 100%;
+
+                @media (max-width: 1425px) {
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 32px;
+                    grid-row-gap: 0;
+                }
+
+                @media (max-width: 1040px) {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 32px;
+                    grid-column-gap: 0;
+                }
             }
 
             .gridLeftBottomCard {
                 background-color: var(--color-yellow-500);
                 padding: 24px 12px 24px 24px;
-                height: fit-content;
+                height: 100%;
+
+                @media (max-width: 1040px) {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
             }
 
             .gridLeftBottomCard h2{
@@ -76,15 +100,22 @@
 
             .gridLeftBottomCard img {
                 width: 100%;
-                max-width: 100%;
+                max-width: 228px;
             }
 
             .gridLeftTopCard {
                 background-color: var(--color-yellow-100);
-                height: fit-content;
+                height: 100%;
                 width: 100%;
                 max-width: 100%;
                 padding: 80px 32px;
+
+                @media (max-width: 1040px) {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
             }
 
             .gridLeftTopCard h2{
@@ -97,7 +128,7 @@
 
             .gridLeftTopCard img {
                 width: 100%;
-                max-width: 100%;
+                max-width: 200px;
             }
 
             .gridLeftTopCard span{
@@ -109,6 +140,11 @@
                 display: grid;
                 grid-template-rows: calc(70% - 16px) calc(30% - 16px);
                 grid-row-gap: 32px;
+                max-height: 914px;
+
+                @media (max-width: 1040px) {
+                    max-height: 100%;
+                }
             }
 
             .gridRightBottom {
@@ -116,11 +152,25 @@
                 grid-template-columns: calc(34% - 32px) calc(66%) ;
                 grid-column-gap: 32px;
                 width: 100%;
+                max-height: 260px;
+
+                @media (max-width: 1040px) {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 32px;
+                    grid-column-gap: 0;
+                }
             }
 
             .gridRightBottomLeftCard {
                 background-color: var(--color-lighter-grey);
                 padding: 24px;
+
+                @media (max-width: 1040px) {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
             }
 
             .gridRightBottomLeftCard h2{
@@ -163,24 +213,46 @@
                 grid-template-columns: calc(66% - 16px) calc(34% - 16px);
                 grid-column-gap: 32px;
                 width: 100%;
+                max-height: 622px;
+
+                @media (max-width: 1040px) {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 32px;
+                    grid-column-gap: 0;
+                    max-height: 100%;
+                }
             }
 
             .gridRightTopLeft {
                 display: grid;
-                grid-template-rows: fit-content(100%) auto;
+                grid-template-rows: 340px 250px;
                 grid-row-gap: 32px;
+                max-height: 100%;
+
+                @media (max-width: 1040px) {
+                    grid-template-rows: auto auto;
+                }
             }
 
             .gridRightTopLeftBottom {
                 display: grid;
                 grid-template-columns: calc(50% - 16px) calc(50% - 16px);
                 grid-column-gap: 32px;
+                max-height: 100%;
+
+                @media (max-width: 1040px) {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 32px;
+                    grid-column-gap: 0;
+                    max-height: 100%;
+                }
             }
 
             .gridRightTopLeftBottomLeftCard {
                 background-color: var(--color-lighter-grey);
                 overflow: hidden;
                 padding: 30px 24px 20px 24px;
+                max-height: 100%;
             }
 
             .gridRightTopLeftBottomLeftCard h2{
@@ -199,7 +271,7 @@
             .gridRightTopLeftBottomRightCard {
                 background-color: var(--color-yellow-500);
                 padding: 24px 24px 0 24px;
-                max-height: 250px;
+                max-height: 100%;
                 overflow: hidden;
             }
 
@@ -222,6 +294,12 @@
                 padding: 60px 54px;
                 justify-content: center;
                 height: fit-content;
+                min-width: 520px;
+
+                @media (max-width: 1040px) {
+                    min-width: 100%;
+                    max-height: 100%;
+                }
             }
 
             .gridRightTopLeftTopCard h2{
@@ -265,6 +343,10 @@
                 background-color: var(--color-purple-100);
                 padding: 32px;
                 overflow: hidden;
+
+                @media (max-width: 1040px) {
+                    max-width: 100%;
+                }
             }
 
             .gridRightTopRightCard h2{
@@ -276,6 +358,11 @@
 
             .gridRightTopRightCard img{
                 max-height: 320px;
+
+                @media (max-width: 1040px) {
+                    max-height: 100%;
+                    max-width: 100%;
+                }
             }
 
             .gridRightTopRightCard p{
