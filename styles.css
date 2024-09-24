@@ -22,6 +22,15 @@ body {
     justify-content: center;
 }
 
+.attribution {
+    text-align: center;
+    font-size: 11px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
 main {
     padding: 80px 11vw 65px 11vw;
     max-height: 100%;
@@ -40,15 +49,6 @@ main {
         grid-row-gap: 32px;
         grid-template-columns: 1fr;
     }
-}
-
-.attribution {
-    text-align: center;
-    font-size: 11px;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
 }
 
 .cardBox {
